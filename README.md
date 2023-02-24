@@ -134,14 +134,26 @@ yarn build
 - PancakeRouter01: 0x706B5c92d9E7fFD2dd50e56A69906C287C6C5550
 - PancakeRouter:   0x8b707e7578059aD857f228FA63E82AA80E132b97
 - Multicall:       0xb4B23070BE725100435457CE2E887aB716575EB2
-- Frontend:        https://pcs-arb.nhancv.com 
+- Frontend:        https://pcs-arb.nhancv.com
 
 **Tokens**
 
-- BAKE Token: 0xaEB4e31A08a172d59493FD0b3910f364FAEcb2E4
 - BUSD Token: 0x2B500C6E7b7616865e3cD3f61e98Ae8ceBDf04C5
-- ETH Token:  0x6F1c9ffd6888D2ca29e808B16DdA5f2C826D193f
 - USDT Token: 0x1931AF8B85fFE2e2b19ceFD4b739D39Fe9b17D99
 - XRP Token:  0xB0aE75378B40Bb3469cbcda9C5727bdEDfcDff31
 - DAI Token:  0x381D14aa1425d643A82A1ba60D9Ce24a57aE798F
-- CAKE Token: 0x177f37CA577f452cbE0bCe99ceDe833154398f18
+
+
+--------
+
+## BSC Testnet Pancakeswap
+- Repo: https://github.com/nhancv/pancake-swap-testnet
+- Web: https://pcs.nhancv.com
+- Addresses
+```
+- WBNB:            0x0dE8FCAE8421fc79B29adE9ffF97854a424Cad09
+- PancakeFactory:  0x5Fe5cC0122403f06abE2A75DBba1860Edb762985
+- INIT_CODE_HASH:  0xbb600ba95884f2c2837114fd2f157d00137e0b65b0fe5226523d720e4a4ce539
+- PancakeRouter01: 0x3E2b14680108E8C5C45C3ab5Bc04E01397af14cB
+- PancakeRouter:   0xCc7aDc94F3D80127849D2b41b6439b7CF1eB4Ae0
+```

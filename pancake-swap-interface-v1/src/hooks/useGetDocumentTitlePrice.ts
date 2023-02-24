@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import useGetPriceData from './useGetPriceData'
-import { CAKE } from '../constants'
+import { WBNB } from '../constants'
 
 const useGetDocumentTitlePrice = () => {
   const priceData = useGetPriceData();
   let cakePriceUsd = 0;
   try {
-    cakePriceUsd = priceData ? parseFloat(priceData.data[CAKE.address].price ?? 0) : 0
+    cakePriceUsd = priceData ? parseFloat(priceData.data[WBNB.address].price ?? 0) : 0
   } catch (e) {
     // Ignore
   }

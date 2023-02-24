@@ -20,6 +20,10 @@ const config: MenuEntry[] = [
         href: '/pool',
       },
       {
+        label: 'BSC Testnet',
+        href: 'https://pcs.nhancv.com',
+      },
+      {
         label: 'DApp',
         href: 'https://dapp.nhancv.com',
       },

@@ -16,15 +16,7 @@
       "address": "0xD8bbeA7e504851b0aa1c37475E7601c590cFa0B4",
       "chainId": 421613,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
-    },
-    {
-      "name": "Bakery Token",
-      "symbol": "BAKE",
-      "address": "0xaEB4e31A08a172d59493FD0b3910f364FAEcb2E4",
-      "chainId": 421613,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe02df9e3e622debdd69fb838bb799e3f168902c5.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/bnb.png"
     },
     {
       "name": "BUSD Token",
@@ -32,47 +24,7 @@
       "address": "0x2B500C6E7b7616865e3cD3f61e98Ae8ceBDf04C5",
       "chainId": 421613,
       "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe9e7cea3dedca5984780bafc599bd69add087d56.png"
-    },
-    {
-      "name": "Ethereum Token",
-      "symbol": "ETH",
-      "address": "0x6F1c9ffd6888D2ca29e808B16DdA5f2C826D193f",
-      "chainId": 421613,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
-    },
-    {
-      "name": "Tether USD",
-      "symbol": "USDT",
-      "address": "0x1931AF8B85fFE2e2b19ceFD4b739D39Fe9b17D99",
-      "chainId": 421613,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
-    },
-    {
-      "name": "XRP Token",
-      "symbol": "XRP",
-      "address": "0xB0aE75378B40Bb3469cbcda9C5727bdEDfcDff31",
-      "chainId": 421613,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe.png"
-    },
-    {
-      "name": "Dai Token",
-      "symbol": "DAI",
-      "address": "0x381D14aa1425d643A82A1ba60D9Ce24a57aE798F",
-      "chainId": 421613,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png"
-    },
-    {
-      "name": "PancakeSwap Token",
-      "symbol": "CAKE",
-      "address": "0x177f37CA577f452cbE0bCe99ceDe833154398f18",
-      "chainId": 421613,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"
     }
   ]
 }

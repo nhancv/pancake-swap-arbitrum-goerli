@@ -5,7 +5,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useMulticallContract } from '../../hooks/useContract'
 import useDebounce from '../../hooks/useDebounce'
 import chunkArray from '../../utils/chunkArray'
-import { CancelledError, retry, RetryableError } from '../../utils/retry'
+import { CancelledError, retry } from '../../utils/retry'
 import { useBlockNumber } from '../application/hooks'
 import { AppDispatch, AppState } from '../index'
 import {
@@ -30,20 +30,21 @@ async function fetchChunk(
   chunk: Call[],
   minBlockNumber: number
 ): Promise<{ results: string[]; blockNumber: number }> {
-  let resultsBlockNumber
   let returnData
   try {
-    [resultsBlockNumber, returnData] = await multicallContract.aggregate(
+    [, returnData] = await multicallContract.aggregate(
       chunk.map((obj) => [obj.address, obj.callData])
     )
   } catch (error) {
     console.info('Failed to fetch chunk inside retry', error)
     throw error
   }
-  if (resultsBlockNumber.toNumber() < minBlockNumber) {
-    throw new RetryableError('Fetched for old block number')
-  }
-  return { results: returnData, blockNumber: resultsBlockNumber.toNumber() }
+  // There is an issue with block number return from arbitrum. The value is always lower minBlockNumber
+  // -> the value is never updated. We can skip check this case
+  // if (resultsBlockNumber.toNumber() < minBlockNumber) {
+  //   throw new RetryableError('Fetched for old block number')
+  // }
+  return { results: returnData, blockNumber: minBlockNumber - 1 }
 }
 
 /**

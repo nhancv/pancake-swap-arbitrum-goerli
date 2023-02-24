@@ -7,12 +7,8 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const CAKE = new Token(ChainId.BSCTESTNET, '0x177f37CA577f452cbE0bCe99ceDe833154398f18', 18, 'CAKE', 'PancakeSwap Token')
 export const WBNB = new Token(ChainId.BSCTESTNET, '0xD8bbeA7e504851b0aa1c37475E7601c590cFa0B4', 18, 'WBNB', 'Wrapped BNB')
-export const DAI = new Token(ChainId.BSCTESTNET, '0x381D14aa1425d643A82A1ba60D9Ce24a57aE798F', 18, 'DAI', 'Dai Stablecoin')
 export const BUSD = new Token(ChainId.BSCTESTNET, '0x2B500C6E7b7616865e3cD3f61e98Ae8ceBDf04C5', 18, 'BUSD', 'Binance USD')
-export const USDT = new Token(ChainId.BSCTESTNET, '0x1931AF8B85fFE2e2b19ceFD4b739D39Fe9b17D99', 18, 'USDT', 'Tether USD')
-export const ETH = new Token(ChainId.BSCTESTNET, '0x6F1c9ffd6888D2ca29e808B16DdA5f2C826D193f', 18, 'ETH', 'Binance-Peg Ethereum Token')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -22,7 +18,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], DAI, BUSD, USDT, ETH],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], BUSD],
 }
 
 /**
@@ -36,20 +32,18 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], DAI, BUSD, USDT],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], BUSD],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], DAI, BUSD, USDT],
+  [ChainId.BSCTESTNET]: [...WETH_ONLY[ChainId.BSCTESTNET], BUSD],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.BSCTESTNET]: [
-    [CAKE, WBNB],
-    [BUSD, USDT],
-    [DAI, USDT],
+    [BUSD, WBNB],
   ],
 }
 
